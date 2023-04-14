@@ -46,8 +46,8 @@ services:
   wp-cli:
     image: "wordpress:cli-php7.1"
     environment:
-      - APACHE_RUN_USER="www-data"
-      - APACHE_RUN_GROUP="www-data"
+      - APACHE_RUN_USER="root"
+      - APACHE_RUN_GROUP="root"
     user: "33:33"
     depends_on:
       - mysql
