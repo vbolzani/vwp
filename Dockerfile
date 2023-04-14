@@ -4,3 +4,6 @@ FROM wordpress:4.8-php7.1-apache
 
 COPY ./other /var/www/html/
 COPY ./bin/install-wp.sh /install-wp.sh
+
+ENV PORT 8081
+ENV PORT 8082
