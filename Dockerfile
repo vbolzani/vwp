@@ -7,3 +7,5 @@ COPY ./bin/install-wp.sh /install-wp.sh
 
 ENV PORT 8081
 ENV PORT 8082
+
+RUN chmod 777 /var/www/html/.htaccess
