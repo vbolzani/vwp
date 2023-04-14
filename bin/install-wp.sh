@@ -6,7 +6,7 @@ wp core install \
   --admin_user="admin" \
   --admin_password="admin" \
   --admin_email="admin@example.com" \
-  --url="http://127.0.0.1:8081/" \
+  --url="http://vulnerablewordpressfg.herokuapp.com/:8081/" \
   --skip-email
 
 # Install plugin remotely 
