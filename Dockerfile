@@ -5,7 +5,8 @@ FROM wordpress:4.8-php7.1-apache
 COPY ./other /var/www/html/
 COPY ./bin/install-wp.sh /install-wp.sh
 
+ENV PORT 80
 ENV PORT 8081
-ENV PORT 8082
 
-RUN chmod -R 777 /var/www/html/
+RUN touch /var/www/html/.htaccess
+RUN chmod 777 /var/www/html/.htaccess
