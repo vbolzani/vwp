@@ -17,7 +17,7 @@ services:
   wordpress:
     build: .
     ports:
-      - 8081:80
+      - 80:80
     environment:
       WORDPRESS_DB_HOST: mysql:3306
       WORDPRESS_DB_USER: wordpress
@@ -34,7 +34,7 @@ services:
   phpmyadmin:
     image: phpmyadmin/phpmyadmin:latest
     ports:
-      - 8082:80
+      - 8080:80
     environment:
       - PMA_ARBITRARY=1
       - PMA_HOST=mysql
@@ -46,8 +46,8 @@ services:
   wp-cli:
     image: "wordpress:cli-php7.1"
     environment:
-      - APACHE_RUN_USER="root"
-      - APACHE_RUN_GROUP="root"
+      - APACHE_RUN_USER="www-data"
+      - APACHE_RUN_GROUP="www-data"
     user: "33:33"
     depends_on:
       - mysql
